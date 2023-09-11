@@ -1,15 +1,49 @@
-# Dugout_Detection
 
-![d1](https://github.com/rishsans/Dugout_Detection/assets/98217912/4626ca4f-468b-47eb-b6da-387131b60720)
+# Dugout Detection from Satellite Imagery
+### Detect military dugouts in satellite imagery using the YOLOv8 deep learning framework.
 
-![d2](https://github.com/rishsans/Dugout_Detection/assets/98217912/356cc1ff-8ed6-4c03-952d-5d8cf050a420)
-![d3](https://github.com/rishsans/Dugout_Detection/assets/98217912/04ecd3b4-af96-44ac-873b-ca35f5ea044f)
-![d4](https://github.com/rishsans/Dugout_Detection/assets/98217912/6a1b523f-90f3-4f0e-941a-9e378090f716)
-![d5](https://github.com/rishsans/Dugout_Detection/assets/98217912/d0fc3492-d878-4b3d-b7c0-234dad5ec738)
-![d6](https://github.com/rishsans/Dugout_Detection/assets/98217912/5358fc6a-2977-4767-9f5e-662345634552)
-![d7](https://github.com/rishsans/Dugout_Detection/assets/98217912/b6e3d731-ca78-4075-bc76-6d4b9a9ca4d7)
-![d8](https://github.com/rishsans/Dugout_Detection/assets/98217912/7a1a5a91-77ee-47bc-ab0b-2101a80cf5c3)
-![d8_1](https://github.com/rishsans/Dugout_Detection/assets/98217912/05462477-3e26-4c04-85f4-c4e9595b278e)
-![d10](https://github.com/rishsans/Dugout_Detection/assets/98217912/d538bfdb-8d6a-43c2-9ac8-de3da867d00c)
-![d11](https://github.com/rishsans/Dugout_Detection/assets/98217912/e63318ee-ca71-421d-a40a-cd29512cdc82)
-![res](https://github.com/rishsans/Dugout_Detection/assets/98217912/c86e5b05-6888-4188-8b36-d5fe6f064e1b)
+## Introduction
+Dugouts are vital military structures, providing insights into adversary deployments. Traditional manual detection is time-consuming and labor-intensive, making automation crucial.
+
+### What are Dugouts?
+
+- Underground or partially underground structures.
+- Types: unoccupied, occupied, and protective.
+- Serve as shelter, storage, and protection.
+![ss_dg](https://github.com/rishsans/Dugout_Detection/assets/98217912/d2584475-8473-4b87-a30f-54718734af7f)
+
+## Dataset Overview
+
+- **Source**: Google Earth.
+- **Annotations**: Using Roboflow platform.
+- **Size**: Augmented to 1,896 images.
+- **Splits**: Training (1,600), Validation (152), Testing (100).
+
+## Methodology
+
+1. **Dataset Creation & Augmentation**: Enhanced using techniques like flip, rotation, and shear.
+2. **YOLOv8**: Employed for its balance between speed and accuracy. Trained on our dataset for 100 epochs with image size 640x640.
+3. **Transfer Learning**: Expedited training and minimized dataset needs by leveraging pre-trained models.
+   
+![ss_dg1](https://github.com/rishsans/Dugout_Detection/assets/98217912/4f9e28c5-3d4c-4495-a3c6-b5ade832df52)
+
+
+<img src="https://github.com/rishsans/Dugout_Detection/assets/98217912/1a0bf42f-7fc5-4f26-92f0-46c16b9298fa" width="700" style="display:block; margin-bottom:200px;" />
+
+
+<img src="https://github.com/rishsans/Dugout_Detection/assets/98217912/48d24315-884d-4f68-aeb7-e6c3b529fa44" width="700" style="display:block;" />
+
+## Result Highlights
+
+- **Precision**: Excels at low confidence thresholds, peaks around 0.9.
+- **Recall**: Shows a decrease as the confidence threshold rises.
+- **Potential Overfitting Indicators**: Differences noted between training and validation losses.
+
+## Significance & Future Prospects
+
+Automated dugout detection:
+
+- Enhances situational awareness.
+- Enables proactive decision-making.
+- Holds potential for georeferencing and offline deployment in the future.
+  
